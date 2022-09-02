@@ -1,0 +1,180 @@
+@charset "UTF-8";
+
+[v-cloak] {display: none;}
+
+/* page */
+.btn:focus{box-shadow: none;}
+
+.w-720 {
+  max-width: 720px;
+  width: 99%;
+  margin: auto;
+}
+
+.bg-lavender {background: lavender; color: #333;}
+.btn-outline-lavender {border-color: lavender;}
+.btn-outline-lavender:hover {background: lavender;}
+
+.btn-dropdown {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #ced4da;
+  text-align: left;
+  display: flex;
+  align-items: baseline;
+}
+
+.btn-dropdown:hover {background: lavender;}
+
+.selected-label {
+  position: relative;
+  width: 100%;
+  margin-left: 0.25em;
+}
+
+.selected-label::after {
+  position: absolute;
+  font-family: bootstrap-icons;
+  content: "\F27E";
+  right: 0;
+}
+
+.dropdown-toggle::after {display: none;}
+.dropdown-item.active {background-color: lavender; color: #000000;}
+.dropdown-item span {vertical-align: middle;}
+
+.btn-page-top {
+  position: fixed;
+  right: 30px;
+  bottom: 60px;
+  font-size: 2.5em;
+}
+/* page end */
+/* main table */
+.table-container {
+  width: 100%;
+  margin: auto;
+  overflow: auto;
+}
+
+.main-table {
+  width: 720px;
+  margin: auto;
+  background: #d9d9d9;
+  color: #000;
+  font-size: 15px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  user-select: none;
+}
+
+.th {font-size: 14px; color: #ffffff;}
+.bg-th {background: #444444;}
+.th-id {width: 24px;}
+.th-handed {width: 50px;}
+.bg-th-batting, .bg-th-fielding, .bg-th-pitching {
+  width: 35px;
+  color: #ffffff !important;
+  text-decoration: underline solid #fff;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.bg-th-batting {padding: 0.6em 0; background: #009fe2 !important;}
+.bg-th-batting:hover {background: rgba(0, 159, 226, 0.5) !important;}
+.bg-th-fielding {background: #66c52c !important;}
+.bg-th-fielding:hover {background: rgba(102, 197, 44, 0.3) !important;}
+.bg-th-pitching {background: #009b9c !important;}
+.bg-th-pitching:hover {background: rgba(0, 155, 156, 0.5) !important;}
+.table-border-right-1 {border-right: 1px solid #595959;}
+
+.tr-player {border-top: 1px solid #b4b4b4;}
+
+.sortAsc::before, .sortDesc::after {font-family: bootstrap-icons; font-size: 5px; color: #ffffff;}
+.sortAsc::before {content: "\F235";}
+.sortDesc::after {content: "\F229";}
+/* main table end*/
+/* table items */
+.icon-badge, .icon-badge-lg {
+  display: inline-block;
+  padding: 0.3em;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  background-color: transparent;
+  color: #000;
+  font-size: .80em;
+  font-weight: 700;
+  line-height: 1;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.icon-badge {width: 22px;}
+.icon-badge-lg {width: 40px;}
+
+.handed-r, .handed-l, .handed-s {border-color: #850090; background: #9363a0;}
+.handed-r {color: #00bfff;}
+.handed-l {color: #FFD200;}
+.handed-s {color: #80FF00;}
+
+.role-fp, .role-pitcher {color: #ffffff;}
+.role-fp {background: #277e00; border-color: #9b9b9b;}
+.role-pitcher {background: #aa0000; border-color: #9b9b9b;}
+
+.role-fp-t, .role-pitcher-t {
+  padding-left: 6px;
+  text-align: left;
+  white-space: nowrap;
+}
+.role-fp-t {box-shadow: 5px 0px 0px 0px rgba(39, 126, 0, 1) inset;}
+.role-pitcher-t {box-shadow: 5px 0px 0px 0px rgba(170, 0, 0, 1) inset;}
+
+.pos-c, .pos-in, .pos-out {color: #ffffff;}
+.pos-c {background: #fa9140;border-color: #bc7d00;}
+.pos-in {background: #f8d200;border-color: #a29300;}
+.pos-out {background: #6acec4;  border-color: #008c8c;}
+
+.team-color-e {background: #caa7ca; color: #ffffff;}
+.team-color-f {background: #b6d485; color: #ffffff;}
+.team-color-m {background: #eb894b; color: #ffffff;}
+.team-color-d {background: #ee8383; color: #ffffff;}
+.team-color-s {background: #74a7e5; color: #ffffff;}
+.team-color-l {background: #2b99b0; color: #ffffff;}
+.team-color-t {background: #caa78a; color: #ffffff;}
+.team-color-c {background: #646464; color: #ffffff;}
+.team-color-h {background: #fff79c; color: #000000;}
+.team-color-tokyoA {background: #505050; color: #ff6501;}
+.team-color-hyogo {background: #939393; color: #fff400;}
+.team-color-nagoya {background: #6f6fe6; color: #ffffff;}
+.team-color-yokohama {background: #0091c3; color: #ffffff;}
+.team-color-hiroshima {background: #fb3242; color: #ffffff;}
+.team-color-tokyoB {background: #131773; color: #f75f5c;}
+.team-color-osaka {background: #0091c3; color: #eacd00;}
+.team-color-fukuoka {background: #8f8f8f; color: #fff900;}
+.team-color-hokkaido {background: #00b8d8; color: #fdedba;}
+.team-color-hokkaido-2013 {background: #e60122; color: #ffffff;}
+.team-color-hokkaido-2014 {background: #015190; color: #ffffff;}
+.team-color-hokkaido-2015 {background: #a5a0c8; color: #ffffff;}
+.team-color-hokkaido-2016 {background: #009977; color: #ffffff; border-color: #714f9d;}
+.team-color-hokkaido-2017 {background: #ffea38; color: #33B2E6;}
+.team-color-hokkaido-2018 {background: #0f5be2; color: #ffffff;}
+.team-color-chiba {background: #8f8f8f; color: #ffffff;}
+.team-color-saitama {background: #00b8e0; color: #ffffff;}
+.team-color-tohoku {background: #e10091; color: #e1deaf;}
+.team-color-japan {background: #ffffff; color: #bc002d;}
+.team-color-all {background: #111111; color: #ffffff;}
+.team-color-other {background: #f3f3ee; color: #000000;}
+
+.prm-ten, .prm-nine, .prm-eight, .prm-seven, .prm-six, .prm-five, .prm-other {
+  color: #333333;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.prm-ten {background: #fd2323;}
+.prm-nine {background: #fe5959;}
+.prm-eight {background: #ffa500;}
+.prm-seven {background: #ffff00;}
+.prm-six {background: #90ee90;}
+.prm-five {background: #8ad0f9;}
+.prm-other {background: #d0becc;}
+/* table items end*/
