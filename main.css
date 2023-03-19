@@ -2,21 +2,36 @@
 
 [v-cloak] {display: none;}
 
-/* page */
-.btn:focus{box-shadow: none;}
+:root {
+  --main-bg-color: lavender;
+}
 
-.w-720 {
-  max-width: 720px;
-  width: 99%;
+.w-1000 {
+  max-width: 1000px;
+  width: 95%;
   margin: auto;
 }
 
-.bg-lavender {background: lavender; color: #333;}
-.btn-outline-lavender {border-color: lavender;}
-.btn-outline-lavender:hover {background: lavender;}
+.w-800 {
+  min-width: 800px;
+  margin: auto;
+}
+
+.bg-main {
+  background: var(--main-bg-color);
+  color: #333;
+}
+
+.btn-main {
+  background: var(--main-bg-color);
+  color: #333;
+}
+
+.btn-main:hover {
+  text-decoration: underline;
+}
 
 .btn-dropdown {
-  width: 100%;
   background: #ffffff;
   border: 1px solid #ced4da;
   text-align: left;
@@ -24,7 +39,9 @@
   align-items: baseline;
 }
 
-.btn-dropdown:hover {background: lavender;}
+.btn-dropdown:hover {
+  background: var(--main-bg-color);
+}
 
 .selected-label {
   position: relative;
@@ -32,168 +49,118 @@
   margin-left: 0.25em;
 }
 
-.selected-label::after {
-  position: absolute;
-  font-family: bootstrap-icons;
-  content: "\F27E";
-  right: 0;
+.btn-checkbox {
+  background: transparent;
+  border-color: #ced4da;
 }
 
-.dropdown-toggle::after {display: none;}
-.dropdown-item.active {background-color: lavender; color: #000000;}
-.dropdown-item span {vertical-align: middle;}
-
-.btn-page-top {
-  position: fixed;
-  right: 30px;
-  bottom: 60px;
-  font-size: 2.5em;
+.btn-checkbox:hover {
+  background: #ddd;
 }
-/* page end */
-/* table data */
-.table-data {
-  display: table;
-  width: 720px;
+
+.btn-checkbox.active:hover {
+  opacity: .6;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background: var(--main-bg-color);
+  color: black;
+}
+
+.main-table th, .main-table td {
+  border-right: 1px solid #dee2e6!important;
+}
+
+.main-table th:hover {
+  background: #e5e7eb;
+}
+
+.main-table th:nth-last-child(1), .main-table td:nth-last-child(1) {
+  border-right: none!important;
+}
+
+.main-table th:nth-child(7), .main-table th:nth-child(11),
+.main-table td:nth-child(7), .main-table td:nth-child(11) {
+  border-right: 1px solid #000!important;
+}
+
+.sort {
+  width: 13px;
+  height: 24px;
   margin: auto;
-  background: #333333;
-  color: #fff;
-  font-family: 'Arial', sans-serif;
-  font-size: 14px;
-  overflow: auto;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
-.table-data-cell {
-  display: table-cell;
-  width: 35px;
-  text-align: center;
+.sort-desc {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOTIuMzYyIiBoZWlnaHQ9IjI5Mi4zNjIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI5Mi4zNjIgMjkyLjM2MiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTI4Ni45MzUgNjkuMzc3Yy0zLjYxNC0zLjYxNy03Ljg5OC01LjQyNC0xMi44NDgtNS40MjRIMTguMjc0Yy00Ljk1MiAwLTkuMjMzIDEuODA3LTEyLjg1IDUuNDI0QzEuODA3IDcyLjk5OCAwIDc3LjI3OSAwIDgyLjIyOGMwIDQuOTQ4IDEuODA3IDkuMjI5IDUuNDI0IDEyLjg0N2wxMjcuOTA3IDEyNy45MDdjMy42MjEgMy42MTcgNy45MDIgNS40MjggMTIuODUgNS40MjhzOS4yMzMtMS44MTEgMTIuODQ3LTUuNDI4TDI4Ni45MzUgOTUuMDc0YzMuNjEzLTMuNjE3IDUuNDI3LTcuODk4IDUuNDI3LTEyLjg0NyAwLTQuOTQ4LTEuODE0LTkuMjI5LTUuNDI3LTEyLjg1eiIvPjwvc3ZnPg==);
+
+  background-position-y: 65%;
+  background-size: 10px;
 }
 
- .table-data-cell:nth-child(1) {width: 230px;}
-/* table data end */
-/* main table */
-.table-container {
-  width: 100%;
-  margin: auto;
-  overflow: auto;
+.sort-asc {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOTIuMzYyIiBoZWlnaHQ9IjI5Mi4zNjEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDI5Mi4zNjIgMjkyLjM2MSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTI4Ni45MzUgMTk3LjI4NyAxNTkuMDI4IDY5LjM4MWMtMy42MTMtMy42MTctNy44OTUtNS40MjQtMTIuODQ3LTUuNDI0cy05LjIzMyAxLjgwNy0xMi44NSA1LjQyNEw1LjQyNCAxOTcuMjg3QzEuODA3IDIwMC45MDQgMCAyMDUuMTg2IDAgMjEwLjEzNHMxLjgwNyA5LjIzMyA1LjQyNCAxMi44NDdjMy42MjEgMy42MTcgNy45MDIgNS40MjUgMTIuODUgNS40MjVoMjU1LjgxM2M0Ljk0OSAwIDkuMjMzLTEuODA4IDEyLjg0OC01LjQyNSAzLjYxMy0zLjYxMyA1LjQyNy03Ljg5OCA1LjQyNy0xMi44NDdzLTEuODE0LTkuMjMtNS40MjctMTIuODQ3eiIvPjwvc3ZnPg==);
+
+  background-position-y: 35%;
+  background-size: 10px;
 }
 
-.main-table {
-  width: 720px;
-  margin: auto;
-  background: #d9d9d9;
-  color: #000;
-  font-size: 15px;
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-  user-select: none;
+.sort-neutral {
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MDEuOTk4IiBoZWlnaHQ9IjQwMS45OTgiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQwMS45OTggNDAxLjk5OCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTczLjA5MiAxNjQuNDUyaDI1NS44MTNjNC45NDkgMCA5LjIzMy0xLjgwNyAxMi44NDgtNS40MjQgMy42MTMtMy42MTYgNS40MjctNy44OTggNS40MjctMTIuODQ3cy0xLjgxMy05LjIyOS01LjQyNy0xMi44NUwyMTMuODQ2IDUuNDI0QzIxMC4yMzIgMS44MTIgMjA1Ljk1MSAwIDIwMC45OTkgMHMtOS4yMzMgMS44MTItMTIuODUgNS40MjRMNjAuMjQyIDEzMy4zMzFjLTMuNjE3IDMuNjE3LTUuNDI0IDcuOTAxLTUuNDI0IDEyLjg1IDAgNC45NDggMS44MDcgOS4yMzEgNS40MjQgMTIuODQ3IDMuNjIxIDMuNjE3IDcuOTAyIDUuNDI0IDEyLjg1IDUuNDI0ek0zMjguOTA1IDIzNy41NDlINzMuMDkyYy00Ljk1MiAwLTkuMjMzIDEuODA4LTEyLjg1IDUuNDIxLTMuNjE3IDMuNjE3LTUuNDI0IDcuODk4LTUuNDI0IDEyLjg0N3MxLjgwNyA5LjIzMyA1LjQyNCAxMi44NDhMMTg4LjE0OSAzOTYuNTdjMy42MjEgMy42MTcgNy45MDIgNS40MjggMTIuODUgNS40MjhzOS4yMzMtMS44MTEgMTIuODQ3LTUuNDI4bDEyNy45MDctMTI3LjkwNmMzLjYxMy0zLjYxNCA1LjQyNy03Ljg5OCA1LjQyNy0xMi44NDggMC00Ljk0OC0xLjgxMy05LjIyOS01LjQyNy0xMi44NDctMy42MTQtMy42MTYtNy44OTktNS40Mi0xMi44NDgtNS40MnoiLz48L3N2Zz4=);
+
+  opacity: .3;
 }
 
-.th {font-size: 14px; color: #ffffff;}
-.bg-th {background: #444444;}
-.th-id {width: 24px;}
-.th-handed {width: 50px;}
-.bg-th-batting, .bg-th-fielding, .bg-th-pitching {
-  width: 35px;
-  color: #ffffff !important;
-  text-decoration: underline solid #fff;
-  vertical-align: middle;
-  cursor: pointer;
-}
-.bg-th-batting {padding: 0.6em 0; background: #009fe2 !important;}
-.bg-th-batting:hover {background: rgba(0, 159, 226, 0.5) !important;}
-.bg-th-fielding {background: #66c52c !important;}
-.bg-th-fielding:hover {background: rgba(102, 197, 44, 0.3) !important;}
-.bg-th-pitching {background: #009b9c !important;}
-.bg-th-pitching:hover {background: rgba(0, 155, 156, 0.5) !important;}
-.table-border-right-1 {border-right: 1px solid #595959;}
+.bg-team-e {background: #856996!important; color: #ffffff!important;}
+.bg-team-f {background: #498351!important; color: #ffffff!important;}
+.bg-team-m {background: #d95e2e!important; color: #ffffff!important;}
+.bg-team-d {background: #b4252d!important; color: #ffffff!important;}
+.bg-team-s {background: #1a75bb!important; color: #ffffff!important;}
+.bg-team-l {background: #368582!important; color: #ffffff!important;}
+.bg-team-t {background: #9f854a!important; color: #ffffff!important;}
+.bg-team-c {background: #313131!important; color: #ffffff!important;}
+.bg-team-h {background: #fff79c!important; color: #000000!important;}
+.bg-team-tokyoA {background: #505050!important; color: #ff6501!important;}
+.bg-team-hyogo {background: #939393!important; color: #fff400!important;}
+.bg-team-nagoya {background: #0C3282!important; color: #ffffff!important;}
+.bg-team-yokohama {background: #0091c3!important; color: #ffffff!important;}
+.bg-team-hiroshima {background: #fb3242!important; color: #ffffff!important;}
+.bg-team-tokyoB {background: #131773!important; color: #f75f5c!important;}
+.bg-team-osaka {background: #0091c3!important; color: #eacd00!important;}
+.bg-team-fukuoka {background: #8f8f8f!important; color: #fff900!important;}
+.bg-team-hokkaido {background: #00b8d8!important; color: #fdedba!important;}
+.bg-team-hokkaido-2013 {background: #e60122!important; color: #ffffff!important;}
+.bg-team-hokkaido-2014 {background: #015190!important; color: #ffffff!important;}
+.bg-team-hokkaido-2015 {background: #a5a0c8!important; color: #ffffff!important;}
+.bg-team-hokkaido-2016 {background: #009977!important; color: #ffffff!important;}
+.bg-team-hokkaido-2017 {background: #ffea38!important; color: #33B2E6!important;}
+.bg-team-hokkaido-2018 {background: #0f5be2!important; color: #ffffff!important;}
+.bg-team-chiba {background: #8f8f8f!important; color: #ffffff!important;}
+.bg-team-saitama {background: #00b8e0!important; color: #ffffff!important;}
+.bg-team-tohoku {background: #e10091!important; color: #e1deaf!important;}
+.bg-team-all-c {background: #0f8f2e!important; color: #fff!important;}
+.bg-team-japan {background: #00275E!important; color: #fff!important;}
+.bg-team-other {background: #f3f3ee!important; color: #000000!important;}
 
-.tr-player {border-top: 1px solid #b4b4b4;}
+.bg-role-fp {background: #fff!important; color: #000!important;}
+.bg-role-pi {background: #ff9e9e!important; color: #000!important;}
 
-.sortAsc::before, .sortDesc::after {font-family: bootstrap-icons; font-size: 5px; color: #ffffff;}
-.sortAsc::before {content: "\F235";}
-.sortDesc::after {content: "\F229";}
-/* main table end*/
-/* table items */
-.icon-badge, .icon-badge-lg {
-  display: inline-block;
-  padding: 0.3em;
-  border-radius: 0.25rem;
-  border: 1px solid transparent;
-  background-color: transparent;
-  color: #000;
-  font-size: .80em;
-  font-weight: 700;
-  line-height: 1;
-  vertical-align: middle;
-  text-align: center;
-}
+.bg-handed-r {background: #fff!important; color: #000!important;}
+.bg-handed-rl {background: #ffbf7f!important; color: #000!important;}
+.bg-handed-rs {background: #7fffbf!important; color: #000!important;}
+.bg-handed-lr {background: #fff!important; color: #000!important;}
+.bg-handed-l {background: #ffbf7f!important; color: #000!important;}
+.bg-handed-ls {background: #7fffbf!important; color: #000!important;}
 
-.icon-badge {width: 22px;}
-.icon-badge-lg {width: 40px;}
-
-.handed-r, .handed-l, .handed-s {border-color: #850090; background: #9363a0;}
-.handed-r {color: #00bfff;}
-.handed-l {color: #FFD200;}
-.handed-s {color: #80FF00;}
-
-.role-fp, .role-pitcher {color: #ffffff;}
-.role-fp {background: #277e00; border-color: #9b9b9b;}
-.role-pitcher {background: #aa0000; border-color: #9b9b9b;}
-
-.role-fp-t, .role-pitcher-t {
-  padding-left: 6px;
-  text-align: left;
-  white-space: nowrap;
-}
-.role-fp-t {box-shadow: 5px 0px 0px 0px rgba(39, 126, 0, 1) inset;}
-.role-pitcher-t {box-shadow: 5px 0px 0px 0px rgba(170, 0, 0, 1) inset;}
-
-.pos-c, .pos-in, .pos-out {color: #ffffff;}
-.pos-c {background: #fa9140;border-color: #bc7d00;}
-.pos-in {background: #f8d200;border-color: #a29300;}
-.pos-out {background: #6acec4;  border-color: #008c8c;}
-
-.team-color-e {background: #caa7ca; color: #ffffff;}
-.team-color-f {background: #b6d485; color: #ffffff;}
-.team-color-m {background: #eb894b; color: #ffffff;}
-.team-color-d {background: #ee8383; color: #ffffff;}
-.team-color-s {background: #74a7e5; color: #ffffff;}
-.team-color-l {background: #2b99b0; color: #ffffff;}
-.team-color-t {background: #caa78a; color: #ffffff;}
-.team-color-c {background: #646464; color: #ffffff;}
-.team-color-h {background: #fff79c; color: #000000;}
-.team-color-tokyoA {background: #505050; color: #ff6501;}
-.team-color-hyogo {background: #939393; color: #fff400;}
-.team-color-nagoya {background: #6f6fe6; color: #ffffff;}
-.team-color-yokohama {background: #0091c3; color: #ffffff;}
-.team-color-hiroshima {background: #fb3242; color: #ffffff;}
-.team-color-tokyoB {background: #131773; color: #f75f5c;}
-.team-color-osaka {background: #0091c3; color: #eacd00;}
-.team-color-fukuoka {background: #8f8f8f; color: #fff900;}
-.team-color-hokkaido {background: #00b8d8; color: #fdedba;}
-.team-color-hokkaido-2013 {background: #e60122; color: #ffffff;}
-.team-color-hokkaido-2014 {background: #015190; color: #ffffff;}
-.team-color-hokkaido-2015 {background: #a5a0c8; color: #ffffff;}
-.team-color-hokkaido-2016 {background: #009977; color: #ffffff; border-color: #714f9d;}
-.team-color-hokkaido-2017 {background: #ffea38; color: #33B2E6;}
-.team-color-hokkaido-2018 {background: #0f5be2; color: #ffffff;}
-.team-color-chiba {background: #8f8f8f; color: #ffffff;}
-.team-color-saitama {background: #00b8e0; color: #ffffff;}
-.team-color-tohoku {background: #e10091; color: #e1deaf;}
-.team-color-japan {background: #ffffff; color: #bc002d;}
-.team-color-all {background: #111111; color: #ffffff;}
-.team-color-other {background: #f3f3ee; color: #000000;}
-
-.prm-ten, .prm-nine, .prm-eight, .prm-seven, .prm-six, .prm-five, .prm-other {
-  color: #333333;
-  font-size: 15px;
-  font-family: 'Roboto', sans-serif !important;
-}
-.prm-ten {background: #fd2323;}
-.prm-nine {background: #fe5959;}
-.prm-eight {background: #ffa500;}
-.prm-seven {background: #ffff00;}
-.prm-six {background: #90ee90;}
-.prm-five {background: #8ad0f9;}
-.prm-other {background: #d0becc;}
-/* table items end*/
+.bg-param-ten {background: #fd2323!important;}
+.bg-param-nine {background: #fe5959!important;}
+.bg-param-eight {background: #ffa500!important;}
+.bg-param-seven {background: #ffff00!important;}
+.bg-param-six {background: #90ee90!important;}
+.bg-param-five {background: #8ad0f9!important;}
+.bg-param-four {background: #c0c0c0!important;}
+.bg-param-tree {background: #d3d3d3!important;}
+.bg-param-two {background: #dcdcdc!important;}
+.bg-param-one {background: azure!important;}
