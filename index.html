@@ -12,35 +12,30 @@
     <meta property="og:description" content="ダイナマイト野球に登場したチームと選手の一覧をウェブサイト上で見ることができます。">
     <meta property="og:image" content="https://miike-7.github.io/dydb/img/img_374.png">
     <link rel="shortcut icon" href="img/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css?110b">
   </head>
-  <body class="bg-body">
+  <body class="bg-light">
 
     <noscript>
       <p>javascriptが無効です。各ブラウザの設定より有効にして下さい。</p>
     </noscript>
 
-    <header>
-      <div class="w-720 container py-1">
+    <header class="bg-dark text-white">
+      <div class="container py-1">
         <div class="row align-items-center justify-content-center text-center">
           <div class="col-7">
             <h1 class="fs-5 m-0">ダイナマイト野球 選手データベース</h1>
           </div>
           <div class="col-5">
-            <button class="btn btn-sm btn-outline-lavender" data-bs-toggle="modal" data-bs-target="#mainModal" type="button">
-              <i class="bi bi-info-circle"></i>
-              <span>データについて</span>
-            </button>
+            <button class="btn btn-sm btn-main shadow-none" data-bs-toggle="modal" data-bs-target="#mainModal" type="button">データについて</button>
           </div>
         </div>
       </div>
     </header>
 
     <main>
-      <div id="app"></div>
+      <div>メンテナンス中</div>
     </main>
     
     <div id="btn_page_top" class="btn-page-top" role="button">
@@ -48,19 +43,12 @@
     </div>
 
     <footer>
-      <div class="position-fixed bottom-0 container-fluid bg-dark text-white">
-        <p class="m-0 text-center"><small>&copy; 2022 @miike_7</small></p>
-      </div>
+      <p class="m-0 text-center"><small>&copy; 2023 @miike_7</small></p>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="https://unpkg.com/vue@3.2.47/dist/vue.global.prod.js"></script>
     <script src="js/main.js?110b" charset="utf-8"></script>
-    <script type="text/javascript">
-    document.getElementById('btn_page_top').addEventListener('click', function(){
-      window.scroll({top: 0});
-    });
-    </script>
     
   </body>
 </html>
